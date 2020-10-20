@@ -35,12 +35,12 @@ def turn(board)
   user_input = gets.strip
   input_to_index(user_input)
   index = user_input.to_i - 1
-  valid_move?(board, index)
-    if valid_move?(board, index) == true
+     if valid_move?(board, index) == true
       move(board, index, current_player = "X")
       display_board(board)
     elsif valid_move?(board, index) == false
       turn(board)
-    end
+    end  
+  valid_move?(board, index)
 end
 
