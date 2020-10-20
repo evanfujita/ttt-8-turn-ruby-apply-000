@@ -14,6 +14,7 @@ end
 def valid_move?(board, index)
   if (index >= 0) && (index <= 8)
     position_taken?(board, index)
+    move(board, index, current_player)
   else
     false
   end
@@ -38,7 +39,6 @@ def turn(board)
   index = user_input.to_i - 1
   valid_move?(board, index)
     if valid_move?(board, index) == true
-      move(board, index, current_player = "X")
       display_board(board)
     elsif valid_move?(board, index) == false
       turn(board)
