@@ -39,7 +39,7 @@ def turn(board)
     if true
       move(board, index, current_player = "X")
       display_board(board)
-    elsif valid_move?(board, index) == false
+    elsif false
       turn(board)
     end
 end
