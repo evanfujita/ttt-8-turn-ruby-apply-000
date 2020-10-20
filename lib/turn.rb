@@ -44,7 +44,5 @@ def turn(board)
     elsif valid_move?(board, index) == false
       turn(board)
     end
-    turn(board)
-    until 
 end
 
