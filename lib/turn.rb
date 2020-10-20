@@ -24,6 +24,12 @@ def position_taken?(board, index)
   elsif (board[index] == "X" || board[index] == "O" || board[index] == nil)
     false
 end
+   if valid_move?(board, index) == true
+      move(board, index, current_player = "X")
+      display_board(board)
+    else 
+      turn(board)
+end
 end
 
 def move(board, index, current_player = "X")
@@ -35,11 +41,5 @@ def turn(board)
   user_input = gets.strip
   input_to_index(user_input)
   index = user_input.to_i - 1
-     if valid_move?(board, index) == true
-      move(board, index, current_player = "X")
-      display_board(board)
-    else 
-      turn(board)
-    end  
   valid_move?(board, index)
 end
