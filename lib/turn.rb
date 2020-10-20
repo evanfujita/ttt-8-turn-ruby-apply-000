@@ -21,7 +21,6 @@ end
 
 def position_taken?(board, index)
   if (board[index] == " " || board[index] == "" || board[index] == "  ")
-    move(board, index, current_player = "X")
     true
   elsif (board[index] == "X" || board[index] == "O" || board[index] == nil)
     false
