@@ -12,17 +12,17 @@ index = user_input.to_i - 1
 end
 
 def valid_move?(board, index)
-  if (index >= 0) && (index <= 8) 
-    true
+  if (index >= 0) && (index <= 8)
+    position_taken?(board, index)
   else
     false
   end
 end
 
 def position_taken?(board, index)
-  if (board[index] == " " || board[index] == "" || board[index] == "  ")
+  if (board[index] == " " || board[index] == "" )
     true
-  elsif (board[index] == "X" || board[index] == "O" || board[index] == "nil")
+  elsif (board[index] == "X" || board[index] == "O" || board[index] == "  " || board[index] == nil)
     false
 end
 end
